@@ -1,0 +1,25 @@
+.buttons {
+    margin-top: 7px;
+    height: 25px;
+    width: 30px;
+    border: rgb(55, 135, 255) 2px solid;
+    border-radius: 3px;
+    background-color: rgb(217, 246, 250);
+    display: flex;
+    font-size: medium;
+    text-align: center;
+    
+}
+.setbuttons {
+    margin-top:15px;
+    height: 40px;
+    width: 70px;
+    border: rgb(92, 55, 255) 2px solid;
+    border-radius: 3px;
+    background-color: rgb(180, 246, 255);
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    color:mediumslateblue;
+    font-weight: bolder;    
+ } 
+

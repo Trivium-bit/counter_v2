@@ -1,0 +1,59 @@
+.buttons {
+    margin: 10px;
+    width: auto;
+    padding: 10px;
+    border: rgb(92, 55, 255) 2px solid;
+    border-radius: 7px;
+    background-color: rgb(180, 246, 255);
+    display:inline-flex;
+    margin-left: 70px;
+    color:mediumslateblue;
+    font-weight: bolder;    
+ } 
+ 
+.butCounter {
+    border-radius: 5px;
+    border: rgb(91, 62, 145) 1px solid;
+    height: 30px;
+    width: 60px;
+    background-color: rgb(255, 250, 242);
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    color:mediumslateblue;
+    font-weight:bolder;    
+}
+
+.redButCounter {
+    border-radius: 5px;
+    border: rgb(67, 0, 192) 1px solid;
+    height: 30px;
+    width: 60px;
+    background-color: rgb(255, 180, 158);
+    color: mediumslateblue;
+    font-weight:bolder;   
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+}
+.butReset {
+    margin-left: 10px;
+    border-radius: 5px;
+    border: rgb(67, 0, 192) 1px solid;
+    height: 30px;
+    width: 60px;
+    background-color: rgb(255, 250, 242);
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    color:mediumslateblue;
+    font-weight:bolder;    
+}
+
+.redButReset {
+    margin-left: 10px;
+    border-radius: 5px;
+    border: rgb(67, 0, 192) 1px solid;
+    height: 30px;
+    width: 60px;
+    background-color: rgb(255, 79, 79);
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+}
