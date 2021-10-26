@@ -30,7 +30,7 @@ export type SetValueActionType = {
 }
 export type ResetValueActionType = {
     type: 'RESET-VALUE'
-    startValue: number
+    value: number
     [key: string]: any
 }
 
@@ -41,9 +41,9 @@ export type StateType = {
 }
 
 const initialState: StateType = {
-startValue: 0,
-maxValue: 1,
-value: 0
+startValue: 5,
+maxValue: 7,
+value: 2
 }
 
 export type ActionType = StartValueUpActionType | 
@@ -88,10 +88,10 @@ export const countReducer = (state = initialState, action: ActionType) => {
         ...state,
         value: state.value + 1
     }    
-       case 'RESET-VALUE':   
+    case 'RESET-VALUE':   
     return {
         ...state,
-        value: action.value === state.startValue
+        value: state.value === state.startValue
     }
     default:
     return {...state}
@@ -116,7 +116,7 @@ export const countReducer = (state = initialState, action: ActionType) => {
     export const IncValueAC = (value: number): IncActionType => {
         return { type: 'INC-VALUE', value}
         }  
-    export const ResetValueAC = (startValue: number): ResetValueActionType => {
-        return { type: 'RESET-VALUE', startValue}
+    export const ResetValueAC = (value: number): ResetValueActionType => {
+        return { type: 'RESET-VALUE', value}
         }   
                        

@@ -6,12 +6,11 @@
     border-radius: 3px;
     background-color: rgb(217, 246, 250);
     display: flex;
-    font-size: medium;
-    text-align: center;
+    
     
 }
 .setbuttons {
-    margin-top:15px;
+    margin-top: 20px;
     height: 40px;
     width: 70px;
     border: rgb(92, 55, 255) 2px solid;

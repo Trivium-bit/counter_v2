@@ -63,7 +63,7 @@ function App() {
   dispatch(action)
   }
   const resetCounter = () => {
-  const action = ResetValueAC(state.startValue) 
+  const action = ResetValueAC(state.value) 
   dispatch(action)
   }
   const setCounter = () => {

@@ -15,8 +15,6 @@ function MinMaxValues(props: MaxValueType) {
         <div>
             <div>
                 <button className={classes.buttons} onClick={props.topValueUp}>+</button>
-            </div>
-            <div>
                 <button className={classes.buttons} onClick={props.topValueDown} disabled={props.maxValue < 0}>-</button>
             </div>
 

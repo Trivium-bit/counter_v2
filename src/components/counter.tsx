@@ -5,7 +5,7 @@ import Buttons from  './buttons'
 type ButtonsPropsType = {
     incCounter: (value: number) => void
     setCounter: (value: number) => void
-    resetCounter: (startValue: number) => void
+    resetCounter: (value: number) => void
     screen: number
     maxValue: number
     startValue: number
