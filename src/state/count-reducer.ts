@@ -73,6 +73,7 @@ export const countReducer = (state = initialState, action: ActionType) => {
         maxValue: state.maxValue + 1
     }    
     case 'MAX-VALUE-DOWN':
+        debugger   
         return {
             ...state,
             maxValue: state.maxValue - 1
@@ -88,10 +89,11 @@ export const countReducer = (state = initialState, action: ActionType) => {
         ...state,
         value: state.value + 1
     }    
-    case 'RESET-VALUE':   
+    case 'RESET-VALUE':
+      
     return {
         ...state,
-        value: state.value === state.startValue
+        value: state.startValue
     }
     default:
     return {...state}
