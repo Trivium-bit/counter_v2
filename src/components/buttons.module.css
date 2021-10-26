@@ -1,5 +1,5 @@
 .buttons {
-    margin: 10px;
+    margin-right: 70px;
     width: auto;
     padding: 10px;
     border: rgb(92, 55, 255) 2px solid;
@@ -53,7 +53,7 @@
     border: rgb(67, 0, 192) 1px solid;
     height: 30px;
     width: 60px;
-    background-color: rgb(255, 79, 79);
+    background-color: rgb(252, 72, 102);
     font-size: medium;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
 }

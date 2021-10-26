@@ -28,8 +28,6 @@ function MinMaxValues(props: MaxValueType) {
             <div>
                 <button className={classes.setbuttons} onClick={props.setAreaValueToLocalStorage}>Set</button>
             </div>
-
-            <input type ="number" value="1"></input>
             </div>
     );
 }

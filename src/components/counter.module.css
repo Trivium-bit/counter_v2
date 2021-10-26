@@ -2,8 +2,7 @@
     border: rgb(122, 50, 255) 2px solid ;
     border-radius: 9px;
     background-color: rgb(227, 255, 181);
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 300px;
+    padding: 15px;
+    text-align: center;
   }
   

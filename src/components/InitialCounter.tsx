@@ -1,5 +1,4 @@
 import classes from './InitialCounter.module.css';
-
 import MinMaxValues from './MinMaxValues';
 import InitialDisplay from './InitialDisplay'
 
@@ -11,7 +10,7 @@ type InitialCounterType = {
     lowerValueUp: () => void
     lowerValueDown: () => void
     setAreaValueToLocalStorage: () => void
-        
+
 }
 
 function InitialCounter(props: InitialCounterType) {
@@ -25,7 +24,7 @@ function InitialCounter(props: InitialCounterType) {
                 setAreaValueToLocalStorage={props.setAreaValueToLocalStorage}
                 maxValue={props.maxValue}
                 startValue={props.startValue}
-                />
+            />
 
         </div>
 

@@ -1,18 +1,22 @@
-import React, { useState } from 'react';
+import {MaxValueUpAC, MaxValueDownAC, StartValueUpAC, StartValueDownAC, ResetValueAC, SetValueAC, StateType, IncValueAC } from './state/count-reducer'
 import './App.css';
 import Counter from "./components/counter";
 import InitialCounter from "./components/InitialCounter"
+import { useDispatch } from 'react-redux';
+import {useSelector} from 'react-redux';
+import {AppRootStateType} from './state/store'
 
 function App() {
-
-  let [maxValue, setMaxValue] = useState<number>(1);
+ 
+/* 
+  let [maxValue, SetMaxValue] = useState<number>(0);
   const topValueUp = () => {
-    setMaxValue(maxValue + 1)
+    SetMaxValue(maxValue + 1)
   }
   const topValueDown = () => {
-    setMaxValue(maxValue - 1)
+    SetMaxValue(maxValue - 1)
   }
-
+  
   let [startValue, setMinValue] = useState<number>(0);
   const lowerValueUp = () => {
     setMinValue(startValue + 1)
@@ -23,11 +27,11 @@ function App() {
 
   let [value, setValue] = useState<number>(startValue);
 
-    const counter = () => {
-    if (value < maxValue) {
+  const counter = () => {
+    if (value <= maxValue) {
       let newValue = ++value
-      setValue(newValue)}
-   
+      setValue(newValue)
+    } 
   }
 
   const resetCounter = () => {
@@ -37,32 +41,69 @@ function App() {
   const setAreaValueToLocalStorage = () => {
     setValue(startValue)
     localStorage.setItem('areaValue', JSON.stringify(startValue))
-  }
+  } */
 
-  // const getAreaValueFromLocalStorage = () => {
-  //  let valueAsString = localStorage.getItem('areaValue')
-  //   if (valueAsString) {
-  //     let values = JSON.parse(valueAsString)
-  //     setValue(values)
-  //   }
-  // }
+  const state = useSelector<AppRootStateType, StateType> (state => state.copyState)
+  const dispatch = useDispatch();
+
+  const topValueUp = () => {
+    const action = MaxValueUpAC(state.maxValue)
+    dispatch(action)
+  }
+  const topValueDown = () => {
+    const action = MaxValueDownAC(state.maxValue)
+    dispatch(action)
+  }
+  const startValueUp = () => {
+  const action = StartValueUpAC(state.startValue)
+  dispatch(action)
+  }
+  const startValueDown = () => {
+  const action = StartValueDownAC(state.startValue)
+  dispatch(action)
+  }
+  const resetCounter = () => {
+  const action = ResetValueAC(state.startValue) 
+  dispatch(action)
+  }
+  const setCounter = () => {
+    const action = SetValueAC(state.value) 
+    dispatch(action)
+  } 
+  const IncCounter = () => {
+    const action = IncValueAC(state.value) 
+    dispatch(action)
+  } 
+
+  const setAreaValueToLocalStorage = () => {
+  const action = SetValueAC(state.startValue) 
+  dispatch(action)
+  localStorage.setItem('areaValue', JSON.stringify(state.startValue))
+  }
 
   return (
     <div className="app">
+      <div className="initialCounter">
       <InitialCounter topValueUp={topValueUp}
         topValueDown={topValueDown}
-        lowerValueUp={lowerValueUp}
-        lowerValueDown={lowerValueDown}
-        maxValue={maxValue}
-        startValue={startValue}
+        lowerValueUp={startValueUp}
+        lowerValueDown={startValueDown}
+        maxValue={state.maxValue}
+        startValue={state.startValue}
         setAreaValueToLocalStorage={setAreaValueToLocalStorage}
+          />
+        </div>
+        <div className="counter"></div>
+      <Counter
+        incCounter={IncCounter}
+        setCounter={setCounter}
+        resetCounter={resetCounter}
+        screen={state.value}
+        maxValue={state.maxValue}
+        startValue={state.startValue} 
       />
-      <Counter counter={counter}
-               resetCounter={resetCounter}
-               screen={value}
-               maxValue={maxValue} 
-               startValue={startValue} />
-    </div>
+        </div>
+   
   )
 }
 

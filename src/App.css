@@ -1,22 +1,17 @@
 .app {
- /* display: flex;
- margin: auto;
-
- top:50%;
- left:50%;
- width: 100%;
- height: 100%;
- position: fixed;
- top: 0;
- left: 0;
- display: flex;
- align-items: center;
- align-content: center; 
- justify-content: center; 
- overflow: auto;    */
  display: flex;
  flex-direction: row;
  justify-content: center;
- 
+ margin-top:100px;
+ margin-left: 30px;
+ }
 
-}
+ .initialCounter {
+
+ }
+ 
+ .counter{
+   
+     margin-left: 30px;
+
+ }
