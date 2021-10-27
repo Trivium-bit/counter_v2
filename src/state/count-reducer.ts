@@ -40,11 +40,13 @@ export type StateType = {
     value: number
 }
 
-const initialState: StateType = {
+const initialState = {
 startValue: 0,
 maxValue: 0,
 value: 0
 }
+
+type InitialState = typeof initialState
 
 export type ActionType = StartValueUpActionType | 
                 StartValueDownActionType |
@@ -55,7 +57,7 @@ export type ActionType = StartValueUpActionType |
                 IncActionType
 
 
-export const countReducer = (state = initialState, action: ActionType) => {
+export const countReducer = (state: InitialState = initialState, action: ActionType): InitialState => {
     switch (action.type) {
     case 'START-VALUE-UP':
     return {
@@ -79,11 +81,15 @@ export const countReducer = (state = initialState, action: ActionType) => {
             maxValue: state.maxValue - 1
         }    
     case 'SET-VALUE': 
-    let copyState = {...state}
+    return {
+        ...state,
+        value: action.value
+    }   
+   /*  let copyState = {...state}
     if (copyState.value <= copyState.maxValue) {
         copyState.value = copyState.startValue
     }
-    return copyState
+    return copyState */
     case 'INC-VALUE': 
     return {
         ...state,

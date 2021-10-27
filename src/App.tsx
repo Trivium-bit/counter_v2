@@ -4,46 +4,11 @@ import Counter from "./components/counter";
 import InitialCounter from "./components/InitialCounter"
 import { useDispatch } from 'react-redux';
 import {useSelector} from 'react-redux';
-import {AppRootStateType} from './state/store'
+import {AppStateType} from './state/store'
 
 function App() {
  
-/* 
-  let [maxValue, SetMaxValue] = useState<number>(0);
-  const topValueUp = () => {
-    SetMaxValue(maxValue + 1)
-  }
-  const topValueDown = () => {
-    SetMaxValue(maxValue - 1)
-  }
-  
-  let [startValue, setMinValue] = useState<number>(0);
-  const lowerValueUp = () => {
-    setMinValue(startValue + 1)
-  }
-  const lowerValueDown = () => {
-    setMinValue(startValue - 1)
-  }
-
-  let [value, setValue] = useState<number>(startValue);
-
-  const counter = () => {
-    if (value <= maxValue) {
-      let newValue = ++value
-      setValue(newValue)
-    } 
-  }
-
-  const resetCounter = () => {
-    setValue(startValue);
-  }
-
-  const setAreaValueToLocalStorage = () => {
-    setValue(startValue)
-    localStorage.setItem('areaValue', JSON.stringify(startValue))
-  } */
-
-  const state = useSelector<AppRootStateType, StateType> (state => state.copyState)
+  const state = useSelector<AppStateType, StateType> (state => state.counter)
   const dispatch = useDispatch();
 
   const topValueUp = () => {
