@@ -81,15 +81,11 @@ export const countReducer = (state: InitialState = initialState, action: ActionT
             maxValue: state.maxValue - 1
         }    
     case 'SET-VALUE': 
-    return {
-        ...state,
-        value: action.value
-    }   
-   /*  let copyState = {...state}
+    let copyState = {...state}
     if (copyState.value <= copyState.maxValue) {
         copyState.value = copyState.startValue
     }
-    return copyState */
+    return copyState
     case 'INC-VALUE': 
     return {
         ...state,

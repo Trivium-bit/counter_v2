@@ -8,7 +8,7 @@ export type InitialDisplayType = {
     topValueDown: () => void
     lowerValueUp: () => void
     lowerValueDown: () => void
-    setAreaValueToLocalStorage: () => void
+    setCounter: () => void
 }
 
 function InitialDisplay(props: InitialDisplayType) {
@@ -29,7 +29,7 @@ function InitialDisplay(props: InitialDisplayType) {
             </div>
             </div>
             <div>
-                <button className={classes.setbuttons} onClick={props.setAreaValueToLocalStorage}>Set</button>
+                <button className={classes.setbuttons} onClick={props.setCounter}>Set</button>
             </div>
         </div>
     );

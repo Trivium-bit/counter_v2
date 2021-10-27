@@ -8,7 +8,7 @@ type InitialCounterType = {
     topValueDown: () => void
     lowerValueUp: () => void
     lowerValueDown: () => void
-    setAreaValueToLocalStorage: () => void
+    setCounter: () => void
 }
 
 function InitialCounter(props: InitialCounterType) {
@@ -20,7 +20,7 @@ function InitialCounter(props: InitialCounterType) {
                             topValueDown={props.topValueDown}
                             lowerValueUp={props.lowerValueUp}
                             lowerValueDown={props.lowerValueDown}
-                            setAreaValueToLocalStorage={props.setAreaValueToLocalStorage}
+                            setCounter={props.setCounter}
                   />
         </div>
 

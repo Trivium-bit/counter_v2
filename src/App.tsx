@@ -40,12 +40,6 @@ function App() {
     dispatch(action)
   } 
 
-  const setAreaValueToLocalStorage = () => {
-  const action = SetValueAC(state.startValue) 
-  dispatch(action)
-  localStorage.setItem('areaValue', JSON.stringify(state.startValue))
-  }
-
   return (
     <div className="app">
       <div className="initialCounter">
@@ -55,7 +49,7 @@ function App() {
         lowerValueDown={startValueDown}
         maxValue={state.maxValue}
         startValue={state.startValue}
-        setAreaValueToLocalStorage={setAreaValueToLocalStorage}
+        setCounter={setCounter}
           />
         </div>
         <div className="counter"></div>
