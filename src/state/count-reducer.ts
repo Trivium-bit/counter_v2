@@ -41,9 +41,9 @@ export type StateType = {
 }
 
 const initialState: StateType = {
-startValue: 5,
-maxValue: 7,
-value: 2
+startValue: 0,
+maxValue: 0,
+value: 0
 }
 
 export type ActionType = StartValueUpActionType | 
@@ -89,8 +89,7 @@ export const countReducer = (state = initialState, action: ActionType) => {
         ...state,
         value: state.value + 1
     }    
-    case 'RESET-VALUE':
-      
+    case 'RESET-VALUE': 
     return {
         ...state,
         value: state.startValue

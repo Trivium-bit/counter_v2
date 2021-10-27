@@ -1,4 +1,5 @@
 .buttons {
+    padding-top: 20px;
     margin-right: 70px;
     width: auto;
     padding: 10px;
@@ -28,8 +29,8 @@
     border: rgb(67, 0, 192) 1px solid;
     height: 30px;
     width: 60px;
-    background-color: rgb(255, 180, 158);
-    color: mediumslateblue;
+    background-color: rgb(253, 143, 170);
+    color: rgb(176, 255, 196);
     font-weight:bolder;   
     font-size: medium;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
@@ -53,7 +54,7 @@
     border: rgb(67, 0, 192) 1px solid;
     height: 30px;
     width: 60px;
-    background-color: rgb(252, 72, 102);
+    background-color: rgb(253, 143, 170);
     font-size: medium;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
 }
