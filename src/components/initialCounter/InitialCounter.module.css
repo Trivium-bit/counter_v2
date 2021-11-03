@@ -1,8 +1,9 @@
-.counter {
+.initial_counter {
+  height: 200px;
+  width: 300px;
     border: rgb(122, 50, 255) 2px solid ;
     border-radius: 9px;
     background-color: rgb(227, 255, 181);
-    padding: 15px;
-    text-align: center;
+    text-align: center;   
   }
   
